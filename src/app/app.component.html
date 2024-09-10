@@ -20,8 +20,6 @@
   }
 
   main {
-    width: 100%;
-    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,19 +28,9 @@
     position: relative;
   }
 
- 
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-
-  @media screen and (max-width: 650px) {
+  /* @media screen and (max-width: 650px) {
     .content {
-      flex-direction: column;
+     
       width: max-content;
     }
 
@@ -52,17 +40,45 @@
       background: var(--red-to-pink-to-purple-horizontal-gradient);
       margin-block: 1.5rem;
     }
-  }
+  } */
 </style>
 
 <main class="main">
   <div class="content">
-    <div class="left-side">
-      <h1>Hello🎉</h1>
-      <p></p>
+    <h1>Hello🎉</h1>
+    &nbsp;
+    <div>
+      <button mat-fab extended  color="primary">
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
+      </div>
+      &nbsp;
+      <div>
+      <button mat-button  style="background-color: #ff5722; color: #fff;">
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
+      </div>
+      &nbsp;
+      <div>
+      <button mat-fab extended  style="background-color: #ff5722; color: #fff;">
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
     </div>
+    &nbsp;
+    <section>
+      <div class="example-label">Basic</div>
+      <div class="example-button-row">
+        <button mat-button>Basic</button>
+        <button mat-button disabled>Disabled</button>
+        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
   </div>
 </main>
+
 
 
 <router-outlet />
